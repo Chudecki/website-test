@@ -1,16 +1,203 @@
-<<!DOCTYPE html>
-<HTML>
-    
-<head>
+<!DOCTYPE html>
+<html>
 
-    <title>
-        Jakubs website
-    </title>
+    <head>
+        <title>JOB APPLICATION FORM</title>
+    </head>
 
-</head>
 <body>
+    <style>
+        .name{
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            z-index: 10;
+            }
+        .birthdate{
+            position: absolute;
+            top: 200px;
+            left: 650px;
+            z-index: 10;
+            }
+        .address{
+            position: absolute;
+            top: 270px;
+            left: 100px;
+            z-index: 10;
+            }
+        .telephone{
+            position: absolute;
+            top: 270px;
+            left: 650px;
+            z-index: 10;
+            }
+        .zip{
+            position: absolute;
+            top: 340px;
+            left: 650px;
+            z-index: 10;
+            }
+        .city{
+            position: absolute;
+            top: 340px;
+            left: 100px;
+            z-index: 10;
+            }
+        .state{
+            position: absolute;
+            top: 340px;
+            left: 330px;
+            z-index: 10;
+            }
+        .what_job{
+            position: absolute;
+            top: 447px;
+            left: 100px;
+            z-index: 10;
+            }
+        .what_do{
+            position: absolute;
+            top: 520px;
+            left: 100px;
+            z-index: 10;
+            }
+        .previous{
+            position: absolute;
+            top: 735px;
+            left: 100px;
+            z-index: 10;
+            }
 
-    <h1> WELCOME TO MY WEBSITE</h1>
+        .yes{
+                position: absolute;
+                background-color: black;
+                bottom: 130px;
+                top:820px;
+                left: 120px;
+                height: 22px;
+                font-size: 15px;
+                z-index: 10;
+                border: solid, black, 2px;
+                color: white;}   
+
+        .no{
+            position: absolute;
+            background-color: black;
+            bottom: 130px;
+            top: 820px;
+            left:257px;
+            height: 22px;
+            font-size: 15px;
+            z-index: 10;
+            border: solid, black, 2px;
+            color: white;
+            }
+
+        .box{
+            width: 1000px;
+            height: 350px;
+            background-color: white;
+            border: 2px white;
+            position: absolute;
+            bottom: -300px;
+            left: 0px;
+            z-index: 10;
+            }
+
+        .box2{
+        width: 100px;
+        height: 20px;
+        background-color: white;
+        border: 2px white;
+        position: absolute;
+        top:820px;
+        left: 120px;
+        z-index: +9;
+        }
+
+            /* change to FFFFFF after finished*/
+        input{
+       border:2px solid #FF0000;
+        }
+    </style>
+
+    <form action="action_page.php" method="POST">
+
+        <div class= "name">
+        <input type="text" id="name" name="name">
+    </div>
+
+
+    <div class= "birthdate">
+        <input type="text" id="birthdate" name="birthdate">
+    </div>
+
+
+    <div class= "address">
+        <input type="text" id="address" name="address">
+    </div>
+
+
+    <div class= "telephone">
+        <input type="text" id="telephone" name="telephone">
+    </div>
+
+
+    <div class= "zip">
+        <input type="text" id="zip" name="zip">
+    </div>
+
+
+    <div class= "city">
+        <input type="text" id="city" name="city">
+    </div>
+
+
+    <div class= "state">
+        <input type="text" id="state" name="state">
+    </div>
+
+
+    <div class= "what_job">
+        <input type="text" id="what_job" name="what_job">
+    </div>
+
+
+    <div class= "what_do">
+        <input type="text" id="what_do" name="what_do">
+    </div>
+
+
+    <div class= "previous">
+        <input type= "text" id="previous" name="previous">
+    </div>
+
+
+    <div class= "yes" >
+        <button onclick="yes()">YES</button>
+    </div>
+
+
+    <div class= "no">
+        <button onclick="no()">NO</button>
+    </div>
+
+    </form>
+
+
+
+
+    <script>
+        function yes(){
+            idkdosomething
+        }
+    </script>
+
+    <div class= "box"></div>
+    <div class= "box2"></div>
+
+    <img src="form.png" height="1200" width="1000">
+
 </body>
 
-</HTML>>
+</html>
