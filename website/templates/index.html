@@ -3,6 +3,9 @@
 
     <head>
         <title>JOB APPLICATION FORM</title>
+
+        <script src="button_yes.js"></script>
+
     </head>
 
 <body>
@@ -121,12 +124,13 @@
         }
     </style>
 
-    <form action="action_page.php" method="POST">
+    <form action="/submit" method="POST">
 
         <div class= "name">
         <input type="text" id="name" name="name">
     </div>
 
+    <h1> {{ name }}!</h1>
 
     <div class= "birthdate">
         <input type="text" id="birthdate" name="birthdate">
@@ -173,9 +177,9 @@
     </div>
 
 
-    <div class= "yes" >
-        <button onclick="yes()">YES</button>
-    </div>
+    <div class= "button" >
+        <button onclick="yes()"> YES </button>
+        </div>
 
 
     <div class= "no">
@@ -183,16 +187,6 @@
     </div>
 
     </form>
-
-
-
-
-    <script>
-        function yes(){
-            idkdosomething
-        }
-    </script>
-
     <div class= "box"></div>
     <div class= "box2"></div>
 
