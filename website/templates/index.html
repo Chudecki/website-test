@@ -122,9 +122,18 @@
         input{
        border:2px solid #FF0000;
         }
+
+        .demo_text{
+            position: absolute;
+            top: -300px;
+            left: -100px;
+            color: orangered;
+            font-size: 50px;
+            z-index: 10;
+        }
     </style>
 
-    <form action="/submit" method="POST">
+    
 
         <div class= "name">
         <input type="text" id="name" name="name">
@@ -175,20 +184,18 @@
     </div>
 
 
-    <div 
-        class= "button" >
+    <div class= "yes">
         <button onclick="yes(event)"> YES </button>
 
-        <p id="demo"></p>
+        <p id="demo" class = "demo_text"></p>
 
         </div>
 
 
     <div class= "no">
-        <button onclick="no()">NO</button>
+        <button onclick="no(event)">NO</button>
     </div>
 
-    </form>
     <div class= "box"></div>
     <div class= "box2"></div>
 
