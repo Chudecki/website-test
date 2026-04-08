@@ -6,10 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route("/submit", method=["POST"])
+@app.route("/submit", methods=["POST"])
 def handle_form():
     name = request.form["name"]
-    return render_template("result.html", name=name)
+    return render_template("index.html", name=name)
 
 if __name__ == "__main__":
     app.run(debug=True)
