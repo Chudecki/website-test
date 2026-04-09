@@ -73,26 +73,22 @@
 
         .yes{
                 position: absolute;
-                background-color: black;
                 bottom: 130px;
                 top:820px;
                 left: 120px;
                 height: 22px;
                 font-size: 15px;
                 z-index: 10;
-                border: solid, black, 2px;
                 color: white;}   
 
         .no{
             position: absolute;
-            background-color: black;
             bottom: 130px;
             top: 820px;
             left:257px;
             height: 22px;
-            font-size: 15px;
+            font-size:15px;
             z-index: 10;
-            border: solid, black, 2px;
             color: white;
             }
 
@@ -118,11 +114,6 @@
         z-index: +9;
         }
 
-            /* change to FFFFFF after finished*/
-        input{
-       border:2px solid #FF0000;
-        }
-
         .demo_text{
             position: absolute;
             top: -300px;
@@ -131,9 +122,22 @@
             font-size: 50px;
             z-index: 10;
         }
+
+        .explain_why_fired{
+            position: absolute;
+            bottom: 130px;
+            top: 820px;
+            left:600px;
+            height: 200px;
+            font-size: 1px;
+            z-index: 10;
+            border: solid, 2px, black;
+            /**color: white;**/
+            
+            
+        }
     </style>
 
-    
 
         <div class= "name">
         <input type="text" id="name" name="name">
@@ -181,6 +185,10 @@
 
     <div class= "previous">
         <input type= "text" id="previous" name="previous">
+    </div>
+
+    <div class="explain_why_fired">
+        <input type ="text" id="explain_why_fired" name="explain_why_fired">
     </div>
 
 
