@@ -1,8 +1,11 @@
-function form_submit(form_event){
-    form_event.preventDefault()
+console.log("JS file loaded")
+function form_submit(event){
+    console.log("button clicked")
+    event.preventDefault()
     fetch("/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+
         body: JSON.stringify({
 
             name: document.getElementById("name").value,
@@ -11,7 +14,7 @@ function form_submit(form_event){
             telephone: document.getElementById("telephone").value,
             city: document.getElementById("city").value,
             state: document.getElementById("state").value,
-            zip: document.getElementById("zip").value,
+            zipcode: document.getElementById("zipcode").value,
             what_job: document.getElementById("what_job").value,
             what_do: document.getElementById("what_do").value,
             previous: document.getElementById("previous").value,
@@ -23,5 +26,3 @@ function form_submit(form_event){
         document.getElementById("demo").innerHTML = data.message;
     });
 }
-
-

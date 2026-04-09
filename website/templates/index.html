@@ -4,7 +4,7 @@
     <head>
         <title>JOB APPLICATION FORM</title>
 
-        <script src="/static/button_yes.js"></script>
+        
     </head>
 
 <body>
@@ -50,7 +50,7 @@
             left: 750px;
             z-index: 10;
             }
-        .zip{
+        .zipcode{
             position: absolute;
             top: 440px;
             left: 1025px;
@@ -133,6 +133,11 @@
             display: block;
             margin: auto;
             }
+
+        .submit_form{
+            position: absolute;
+            z-index: 10;
+        }
         
     </style>
 
@@ -144,7 +149,7 @@
 
         <input class= "telephone"type="text" id="telephone" name="telephone">
     
-        <input class="zip"type="text" id="zip" name="zip">
+        <input class="zipcode"type="text" id="zipcode" name="zipcode">
      
         <input class= "city"type="text" id="city" name="city">
  
@@ -153,7 +158,7 @@
 
         <!--make it so that you NEED to fill out the form in order to proceed-->
 
-        <select class ="what_job"name="what_job" form_id="what_job">
+        <select class ="what_job"name="what_job" id="what_job">
 
             <option value="junior_dev"> Junior Dev </option>
             <option value="senior_dev"> Senior Dev </option>
@@ -172,15 +177,17 @@
     
 
             <div class= "yes">
-                <button onclick="yes(event)"> YES </button>
+                <button onclick="yes()""> YES </button>
             
                 <p id="demo" class = "demo_text"></p>
             </div>
 
-            <button class ="no"onclick="no(event)">NO</button>
+            <button class ="no"onclick=no()>NO</button>
+
+            <button type= "button" class ="submit_form" onclick="form_submit(event)""> SUBMIT FORM </button>
     
         <img class= "image" src="/static/form.png" height="1200" width="1000">
-
+    <script src="/static/button_yes.js"></script>            
 </body>
 
 </html>
