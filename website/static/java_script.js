@@ -12,34 +12,44 @@
 
 
 console.log("JS file loaded")
+
 function form_submit(event){
     console.log("button clicked")
     event.preventDefault()
+
+
     fetch("/submit", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({"message": "form submitted"})
 })
+
+
 .then(res => {
     if (!res.ok) {
         throw new Error("Server error");
     }
     return res.json();
 })
+
 .then(data => {
     document.getElementById("demo").innerHTML = data.message;
 })
+
 .catch(err => {
     console.error(err);
 });
+
 //debug from line 36 onward
 fetch("/submit", {"debug test": "debug second part test"})
 .then(res => {
     console.log("STATUS:", res.status);
-    return res.text();   // temporarily use text
+    return res.text("temp text");   // temporarily use text
 })
+
 .then(data => {
     console.log("RAW RESPONSE:", data);
 })
+
 .catch(err => console.error(err));
 }

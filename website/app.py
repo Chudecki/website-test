@@ -19,6 +19,8 @@ def handle_form():
             return jsonify({"message": "No data received"}), 400
 
         return jsonify({"message": "form successfully submitted"}), 200
+    
+        
 
     except Exception as e:
         print("ERROR:", e)
