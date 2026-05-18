@@ -53,3 +53,5 @@ fetch("/submit", {"debug test": "debug second part test"})
 
 .catch(err => console.error(err));
 }
+
+hallo i wanna see if this is sent :) please?
