@@ -1,18 +1,23 @@
 from flask import Flask, render_template, request, jsonify 
 import os
 import json
+from datetime import datetime
 
 def json_data_handling(data):
     folder_path = 'website/json_user_data'
-    
 
-    # Ensure the folder exists
+    # create folder if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
 
-    file_path = os.path.join(folder_path, 'data.json')
+    # safe timestamp for filename
+    date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    name = "test_name"
 
-    # Write the JSON data to the file
-    with open(file_path, 'w') as file:
+    # full file path
+    file_path = os.path.join(folder_path, f"{date}_{name}.json")
+
+    # write json data
+    with open(file_path, "w") as file:
         json.dump(data, file, indent=4)
 
 app = Flask(__name__)
@@ -33,11 +38,9 @@ def handle_form():
             return jsonify({"message": "No data received"}), 400
 
         json_data_handling(data)
+        
         return jsonify({"message": "form successfully submitted"}), 200
-    
-        #json_data_handling(data)
-    
-    
+
     except Exception as e:
         print("ERROR:", e)
         return jsonify({"message": "error"}), 500
