@@ -1,16 +1,3 @@
-            //name: document.getElementById("name").value,
-            //address: document.getElementById("address").value,
-            //birthdate: document.getElementById("birthdate").value,
-            //telephone: document.getElementById("telephone").value,
-            //city: document.getElementById("city").value,
-            //state: document.getElementById("state").value,
-            //zipcode: document.getElementById("zipcode").value,
-            //what_job: document.getElementById("what_job").value,
-            //what_do: document.getElementById("what_do").value,
-            //previous: document.getElementById("previous").value,
-            //explain_why_fired:document.getElementById("explain_why_fired").value,
-
-
 console.log("JS file loaded")
 
 function form_submit(event){
@@ -56,6 +43,4 @@ function form_submit(event){
 .catch(err => {
     console.error(err);
 });
-
-//debug from line 36 onward
 }
